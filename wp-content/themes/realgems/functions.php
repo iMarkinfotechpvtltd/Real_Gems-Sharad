@@ -905,3 +905,27 @@ function special_nav_class ($classes, $item) {
    return $classes;
 }
 /*************  END OF CODE FOR ACTIVE MENU ITEM ***************/
+
+
+//**************************Start Wordpress Logo Function*******************************************/
+
+function my_loginlogo()
+{
+echo '<style type="text/css">
+  h1 a {
+    background-image: url(' . get_template_directory_uri() . '/images/real_logo.png) !important;
+       background-size: cover !important;
+   height: 87px !important;
+  
+  }
+</style>';
+}
+add_action('login_head', 'my_loginlogo');
+
+function put_my_url()
+{
+  return site_url();
+}
+add_filter('login_headerurl', 'put_my_url');
+
+/**************************End of Wordpress Logo Function***************************************************/

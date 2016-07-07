@@ -1251,6 +1251,31 @@ a.logo {
   position: absolute;
 }
 
+.overlay-loader {
+  background-color: rgba(255, 255, 255, 0.8);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 888;
+}
+.overlay-loader > img {
+  margin-top: -100px;
+  position: absolute;
+  top: 60%;
+}
+
+.wpcf7-response-output.wpcf7-mail-sent-ok {
+  color: green;
+}
+.wpcf7-response-output.wpcf7-validation-errors{
+  color:#ff0000;	
+ }
+
+
+
 /***********************************
   Testimonial page
  ***********************/
@@ -1389,6 +1414,7 @@ a.logo {
 	background-color:#fcfcfc;	
  }	 
 .btn.btn-default.btn-view-all {
+  background-color:transparent;
   border-radius: 0;
   border:1px solid #ec2a32;
   color:#ec2a32;
@@ -1430,6 +1456,11 @@ table.table-compar {
   margin-top: 20px;
   max-width: 100%;
   width: 380px;
+}
+.color_sel .color_block {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
 }
 .product-describe p {
   font-size: 16px;
@@ -1796,6 +1827,16 @@ table.table-compar {
   font-family:'FontAwesome';
   font-size: 20px;
 } 
+.load-more {
+  position: relative;
+}
+.load-more #loading_sec {
+  bottom: 54px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
 
 /***********************************
   Contact-page
@@ -1973,7 +2014,7 @@ label.error{
   border: 1px solid #e63d36;
   border-radius: 0;
   color:#e63d36;
-  display: inline-block;
+  display: inline-block !important;
   font-size: 20px;
   margin:50px auto 10px;
   padding: 12px 40px;
@@ -1983,6 +2024,12 @@ label.error{
   background-color:#e63d36;
   color:#fff;	
  }
+ .contact-form #loading {
+  bottom: 130px;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
 .ring-box-container::after, .ring-box-container::before,
 .left-bar::after, .left-bar::before {
   clear: both;
@@ -2667,8 +2714,15 @@ html[xmlns] .flexslider .slides {
   background-color: #000;
   display: inline-block;
   height: 15px;
-  vertical-align: bottom;
+  margin-top: -6px;
+  vertical-align: middle;
   width: 15px;
+}
+.color_sel {
+  margin: 0 0 20px;
+}
+.video_box video {
+  margin: 0 0 -40px;
 }
 .color_sel a{
   color:#4b4b4b;	
@@ -2684,9 +2738,23 @@ html[xmlns] .flexslider .slides {
   margin-left: 0;
   margin-right: 170px;
 }
+.load-more {
+  margin: 0 0 60px;
+  position: relative;
+}
+.load-more .btn.btn-default.btn-view-all{
+  margin-top:0;	
+ } 
+.breadcrumb nav a {
+  color: #222;
+} 
+.wrap-internal-page {
+  padding: 0 0 40px;
+} 
+.side-search .btn.btn-default {
+  display: none;
+}
 
- 
-  
   
  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
   /* IE10+ specific styles go here */  
@@ -2851,6 +2919,46 @@ body {
   height: 32px;
   width: 20px;
 }
+.testimonial-pagbanner h2::after {
+  height: 52px;
+}
+.side-search.slide-input .form-control {
+  right: 25px;
+  top: -2px;
+}
+.side-search .btn.btn-default {
+  display:inline-block;
+}
+.search-box{
+  position:relative;	
+ }
+.side-search {
+  background-image: none;
+  position: absolute;
+  right: 0;
+  top: -5px;
+  width: auto;
+}
+.side-search .form-control {
+  display: inline-block;
+  max-width: none;
+  opacity: 1;
+  padding: 2px 10px;
+  position: static;
+  vertical-align: top;
+  width: 170px !important;
+}
+.side-search .btn.btn-default {
+	background-color:#EC2A32;
+  border-radius: 0;
+  height: 34px;
+  padding: 0 10px;
+  vertical-align: top;
+}
+.side-search .btn.btn-default:hover{
+	background-color:#c40008;
+	color:#fff;
+ }
 
 	
 }   
@@ -2862,13 +2970,6 @@ body {
   ******************************/
   
 @media(max-width:991px){
-.main-content {
-  display: block;
-  margin-top: 0;
-}	
-.navigation{
-  display:none;	
- }	
 .contact-pagbanner .container .row .col-md-6 {
   display: block;
   float: left;
@@ -2918,7 +3019,111 @@ body {
 body {
   padding: 0 0 480px;
 }
- 
+.img-section img {
+  display: block;
+  float: none;
+  margin: auto;
+  padding-top: 50px;
+  width: 150px;
+}
+.gemstone .container > .row {
+  margin: 0 -15px;
+}
+.engagemet-section {
+  background-color:#e63d36;
+} 
+.engagemet-section .row .col-md-7 {
+  padding: 35px 15px;
+ }
+.our-earrings .container .row .col-md-7 {
+  padding-top: 0;
+}
+.our-earrings .container .row .col-md-7 {
+  margin-top: -60px;
+  padding-top: 0;
+}
+.diamond-education .container .row .col-md-6 br {
+  display: none;
+}
+.diamond-education .container .row .col-md-6:last-child {
+  margin-top: 40px;
+}
+.slider-section .item .container .row .col-sm-6 h3 {
+  font-size: 40px;
+}
+.slider-section .item .container .row .col-sm-6 h2 {
+  font-size: 44px;
+}
+.slider-section .item .container .row .col-sm-6 p {
+  font-size: 14px;
+}
+.welcome-content > h2, .engagemet-section .row .col-md-7 > h3, .gemstone .col-md-9 .row .col-xs-9 h3, .our-earrings .container .row .col-md-7 h3, .testimonial-section .container .carousel .item > h3 {
+  font-size: 28px;
+}
+.welcome-section {
+  padding: 20px 0;
+} 
+.gemstone {
+  margin-top:-50px;
+  padding: 0 0 130px;
+}
+.thumbnail-carousel h3 {
+  font-size: 28px;
+  margin-top: 50px;
+}
+.diamond-education .row .col-md-6 h3 {
+  font-size: 28px;
+}
+.footer form .mc4wp-response {
+  bottom: 0;
+  left: 190px;
+  position: absolute;
+}
+.product-pagbanner .container p br, .testimonial-pagbanner .container p br, .contact-pagbanner .container p br{
+  display:none;
+}
+.grt-in-touch {
+  padding: 20px 0 30px;
+}
+.grt-in-touch .row .wpcf7 {
+  padding: 0 15px;
+}
+.video_box video {
+  width: 100%;
+}
+.product-describe h3 {
+  font-size: 22px;
+}
+.product-describe p {
+  font-size: 14px;
+}
+table.table-compar tr td {
+  font-size: 14px;
+}
+.price-include h4 {
+  font-size: 22px;
+}
+.grt-in-touch {
+  padding: 0 0 15px;
+}
+.similar-products h3 {
+  font-size: 22px;
+}
+.coment-section p {
+  font-size: 15px;
+}	
+.product-pagbanner {
+  overflow: hidden;
+}
+.product-pagbanner img {
+  height: 320px;
+  max-width: none;
+  width: auto;
+}
+#wprmenu_menu ul li.current-menu-item a{
+  color:#606060;	
+ }	
+
 	
  
 }
@@ -2927,4 +3132,401 @@ body {
 /********************************
   MEDIA 991 END HERE
  ***************************/     
+ 
+@media(max-width:768px){
+ 
+ body.sidr-open {
+  overflow: hidden;
+}
+.cart-nav-section .container .row {
+  display: block;
+}
+.cart-nav-section .container {
+  display: block;
+  text-align: center;
+}
+.main-content{
+  border-top:1px solid #ebebeb;	 
+ }
+.navigation{
+  display:none;	
+ }	
+.main-content {
+  display: block;
+  margin-top: 0;
+}	
+
+ 
+ 	 
+	 
+}
+  
+/**************************************
+  MEDIA 768 End Here
+ *****************************/
+ 
+@media(max-width:767px){
+.footer .container .row .col-sm-6 {
+  margin-bottom: 30px;
+} 	
+.footer form .mc4wp-response {
+  margin-top: 20px;
+  position: static;
+ }
+
+.slider-section .item .container .row .col-sm-6 {
+  display: block;
+  padding-top: 20px;
+}
+a.logo {
+  width: 200px;
+}
+.col-md-5.serives-numbers {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 10px;
+}
+.engagemet-section + .container .row .col-md-9 .row .col-xs-3, .engagemet-section + .container .row .col-md-9 .row .col-xs-9 {
+  padding: 0 15px;
+  width: 100%;
+}
+.gemstone .col-md-9 {
+  padding-left: 15px;
+}
+.engagemet-section + .container .row .col-md-9 .row .col-xs-3{
+   margin-bottom:10px;	
+ }
+.engagemet-section + .container .row .col-md-9 .row .col-xs-9{
+  padding-bottom:10px;	
+ }
+.testimonial-section .container .carousel .item > h3 {
+  margin: 0 0 15px;
+}
+.testimonial-section {
+  padding: 35px 0;
+}
+.thumbnail-carousel {
+  padding: 0 0 40px;
+}
+.slick-slide img {
+  width: 50%;
+}
+.thumbnail-carousel h3 {
+  font-size: 23px;
+  margin-top: 30px;
+}
+.our-earrings .container .row .col-md-7 {
+  margin-top: -70px;
+  padding-top: 0;
+}
+.welcome-content > h2, .engagemet-section .row .col-md-7 > h3, .gemstone .col-md-9 .row .col-xs-9 h3, .our-earrings .container .row .col-md-7 h3, .testimonial-section .container .carousel .item > h3 {
+  font-size: 25px;
+}
+.engagemet-section .row .col-md-7 {
+  text-align: left;
+}
+.engagemet-section .row .col-md-7 {
+  padding: 22px 15px;
+}
+.diamond-education .row .col-md-6 h3 {
+  font-size: 25px;
+}
+.diamond-education {
+  padding-top: 35px;
+}
+.diamond-education .container .row .col-md-6:last-child {
+  margin-top: 10px;
+}
+.footer .container .row .col-sm-6 {
+  margin-bottom: 20px;
+}
+.copy-right-section {
+  padding: 10px 0;
+}
+.copy-right-section p span {
+  display: block;
+ }
+.copy-right-section p span a span {
+  display: inline-block;
+  text-decoration: underline;
+}
+.img-section img {
+  padding-top: 20px;
+}
+.gemstone .col-md-9 .row .col-xs-3 img {
+  height: auto;
+  width: 100%;
+}
+body {
+  padding: 0;
+  position: static;
+}
+.footer-wrap {
+  bottom: 0;
+  left: 0;
+  position: static;
+  right: 0;
+}
+.video_box {
+  margin: 0;
+  padding-top: 100%;
+  position: relative;
+}
+.video_box video {
+  height: 100%;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.contact-pagbanner .container .col-md-6:last-child {
+  margin-top:-140px;
+  padding-bottom: 0 !important;
+}
+.hrs-stuff {
+  padding: 50px 0;
+}
+a.logo {
+  display: inline-block;
+  padding: 20px 0;
+} 
+.owl-controls {
+  display: none;
+}
+.similar-products h3 {
+  font-size: 18px;
+}
+.flexslider{
+  overflow:hidden;	
+ }
+
+.page-error-404 {
+  padding: 30px 0 80px;
+}
+.img-squre {
+  float: none;
+  margin: 0 auto 10px;
+  width: 120px;
+}
+.coment-section {
+  margin-left: 0;
+}
+.coment-section p {
+  font-size: 14px;
+  padding: 0;
+}
+.grey-row .img-squre {
+  float: none;
+  margin: 0 auto 10px;
+}
+.grey-row .coment-section {
+  margin-left: 0;
+  margin-right: 0;
+}
+.testimonial-pagbanner{
+  overflow:hidden;	
+ }
+
+.testimonial-pagbanner img {
+  height: 250px;
+  max-width: none;
+  width: auto;
+}
+.testimonial-pagbanner h2::after {
+  height: 12px;
+  margin-left: -8px;
+}
+.testimonial-pagbanner .container {
+  bottom: 30px;
+}
+
+	
+} 
+
+
+
+/********************************
+  Media 767 End Here
+ ***********************/
+ 
+@media(max-width:480px){
+  .ring-box-container .row .col-xs-12 .row .col-xs-6 {
+    width: 100%;
+  }	
+  
+.ring-box-container .row .col-xs-12 .row .col-xs-6:last-child {
+  margin: 0;
+}
+.serives-numbers ul li {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  width: 48%;
+ }  
+.product-gallery .col-lg-3 {
+  margin-top: 30px;
+  width: 100%;
+}
+.panel-group {
+  margin-bottom: 40px;
+}
+.breadcrumb ul li a, .breadcrumb ul li {
+  font-size: 14px;
+} 
+.thumbnail-carousel {
+  padding: 0 0 10px;
+} 
+.contact-pagbanner > img {
+  height: 250px;
+  max-width: none;
+  width: auto;
+}
+.contact-pagbanner .container .col-md-6:last-child {
+  margin-top: -120px;
+}
+.hrs-stuff .container .row .col-xs-12 {
+  width: 100%;
+} 
+.contact-pagbanner {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.product-pagbanner .container h2, .testimonial-pagbanner .container h2, .contact-pagbanner .container h2 {
+  font-size: 38px;
+}
+.form-logo {
+  margin: -35px auto 0;
+  width: 50px;
+}
+.contact-form h3 {
+  font-size: 28px;
+  margin: 20px 0;
+}
+.contact-form form .group .inputMaterial {
+  font-size: 14px;
+}
+.contact-form {
+  padding: 12px 15px 40px;
+}
+.btn.btn-default.btn-submit {
+  font-size: 14px;
+  margin: 30px auto 0;
+  padding: 9px 30px;
+}
+.contact-form #loading {
+  bottom: 174px;
+}
+.contact-form .alert {
+  margin: 30px 0 0;
+  padding: 4px 0;
+  position: static;
+}
+.hrs-blocks > p {
+  font-size: 14px;
+}
+.hrs-blocks h4 {
+  font-size: 16px;
+}
+.hrs-blocks h5 a, .hrs-blocks h5 {
+  font-size: 14px;
+}
+.hrs-stuff .container .row .col-xs-12 {
+  border-left: 0 none;
+
+}
+.hrs-stuff {
+  padding: 20px 0;
+}
+.hrs-stuff .container .row .col-xs-12:last-child .hrs-blocks hr {
+  border: 0 none;
+}
+.product-gallery {
+  padding: 0 0 20px;
+}
+
+.grt-in-touch .col-xs-12 .form-control {
+  padding: 12px 12px 12px 30px;
+  width: 100%;
+}
+.grt-in-touch .col-xs-12 label {
+  padding: 18px 0 10px;
+}
+#p-carousel {
+  margin: 0 0 10px;
+}
+.left-bar .headding h4 {
+  font-size: 18px;
+}
+.ring-block h4 {
+  font-size: 18px;
+}
+.search-box h3 {
+  font-size: 20px;
+}
+.page-error-404 h1 {
+  font-size: 94px;
+}
+.content-404 p {
+  font-size: 14px;
+}
+.content-404 p a{
+  display:block;	
+ }
+.search-box {
+    position: relative;
+    margin-top: 50px;
+}
+.side-search {
+    right: auto;
+    top: -45px;
+    width: 100%;
+    display: table;
+    left: 0;
+}
+.search-form {
+    display: table-row;
+}
+.side-search .form-control {
+    width: 70% !important;
+    display: table-cell;
+}
+.side-search .btn.btn-default {
+    display: table-cell;
+    width: 30%;
+}
+
+
+ 
+}  
+
+
+/*********************************
+  Media 480 End Here
+ ****************************/
+ 
+@media(max-width:450px){
+.serives-numbers ul li {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  width: 100px;
+ } 
+.serives-numbers ul li:first-child {
+  margin-right: 0;
+  padding-left: 15px;
+}
+.serives-numbers ul li {
+  display: block;
+  float: none;
+  margin: auto !important;
+  text-align: left;
+  vertical-align: top;
+  width: 200px;
+}  
+  
+ 
+} 
+  
+     
    

@@ -19,12 +19,9 @@ $link =get_term_link( $term_id, 'product_cat' );
 <div class="catagiores-page">
   <div class="container">
     <div class="breadcrumb">
-      <ul>
-		<li><?php woocommerce_breadcrumb(); ?></li>
+      <?php woocommerce_breadcrumb(); ?>
          <!--<li><a href="#">Home</a></li>
          <li class="active"><a href="#">Engagement Rings</a></li>-->
-      
-	  </ul>
     </div> 
  
   <div class="search-box">  

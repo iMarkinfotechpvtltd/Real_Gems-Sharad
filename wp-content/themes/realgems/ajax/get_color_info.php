@@ -12,11 +12,13 @@ $color = $wpdb->get_results("SELECT * FROM  im_product_info  WHERE post_id ='".$
 <script>
 jQuery(document).ready(function()
 {
+	setTimeout(explode, 1000);
 	jQuery('.slides:first').hide();
 
 	jQuery('.thumb_image').click(function()
 	{
 		jQuery('.video_box').hide();
+		jQuery('#slider').find('.flex-direction-nav').show(); 
 		jQuery('.slides:first').show(); 
 	});	 
 	
@@ -45,7 +47,12 @@ jQuery('#slider').flexslider({
         }
       });
  
-}); 
+});
+
+function explode()
+{
+	jQuery('#slider').find('.flex-direction-nav').hide();
+} 
 </script>
 
 
@@ -89,8 +96,56 @@ jQuery('#slider').flexslider({
 		
 			foreach($color as $row) 
 			{
+				
 		?>
-				<a href="javascript:void(0);" onclick="get_color_info(<?php echo $row->id;?>);"><?php echo $row->color;?></a>
+				<div class="color_block"><a href="javascript:void(0);" onclick="get_color_info(<?php echo $row->id;?>);">
+				<?php
+					
+					$color = $row->color;
+					switch ($color) {
+						case "14KW":
+							//echo "color is black!";
+						?>
+							<span id="col" style="background-color:black;"></span>
+						<?php 	
+							break;
+						case "14KY":
+							//echo "color is yellow!";
+						?>
+							<span id="col" style="background-color:#EBC686;"></span>
+						<?php 	
+							break;
+						case "14KR":
+							//echo "color is red!";
+						?>
+							<span id="col" style="background-color:red;"></span>
+						<?php	
+							break;
+						case "18KW":
+							//echo "color is black!";
+							?>
+							<span id="col" style="background-color:black;"></span>
+						<?php 	
+							break;
+						case "18KY":
+							//echo "color is yellow!";
+							?>
+							<span id="col" style="background-color:yellow;"></span>
+						<?php	
+							break;
+						case "18KR":
+							//echo "color is red!";
+						?>	
+							<span id="col" style="background-color:red;"></span>
+						<?php		
+							break;	
+						default:
+							echo "Your favorite color is neither black, yellow, nor red!";
+					}
+					?>
+				
+				<?php echo $row->color;?></a></div>
+				<!--<a href="javascript:void(0);" onclick="get_color_info(<?php //echo $row->id;?>);"><?php //echo $row->color;?></a>-->
 	
 		<?php 
 				

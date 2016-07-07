@@ -32,11 +32,11 @@ $subcats = get_categories($args);
 	
   
     <div class="breadcrumb">
-      <ul>
-	  <li><?php woocommerce_breadcrumb(); ?></li>
+    
+	  <?php woocommerce_breadcrumb(); ?>
          <!--<li><a href="#">Home</a></li>
          <li class="active"><a href="#">Engagement Rings</a></li>-->
-      </ul>
+   
     </div> 
   
     
@@ -48,7 +48,7 @@ $subcats = get_categories($args);
 
   <div class="side-search"> 
     <form role="search" method="get" id="searchform" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<input type="text" class="form-control" placeholder="Type Your Search here" name="s" id="s" value="<?php echo get_search_query(); ?>"><i class="fa fa-search" aria-hidden="true"></i>
+			<input type="text" class="form-control" placeholder="Type Your Search here" name="s" id="s" value="<?php echo get_search_query(); ?>"><input class="btn btn-default" type="submit" value="Search"><i class="fa fa-search" aria-hidden="true"></i>
      </form>			
 </div> <!---side-search--->   
 

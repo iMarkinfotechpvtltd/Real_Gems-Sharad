@@ -33,7 +33,7 @@ get_header( 'shop' ); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			aaaaaaaaaa
+		
 
 		<?php endwhile; // end of the loop. ?>
 

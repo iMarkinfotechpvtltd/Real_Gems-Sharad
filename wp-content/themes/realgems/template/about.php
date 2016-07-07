@@ -5,8 +5,12 @@
 
 ?>
 
-<h1>This is About us page</h1>
-
+<div class="wrap-internal-page">
+  <div class="container">
+     <h2>This is About us page</h2>
+  
+  </div>
+ </div> 
 <?php
 get_footer();
 ?>

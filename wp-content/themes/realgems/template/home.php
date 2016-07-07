@@ -138,7 +138,7 @@ get_header();?>
             </div>
             <div class="col-xs-9">
               <h3><?php the_field('home_gemstone_section_1',4);?></h3> 
-              <p><strong><?php the_field('home_gemstone_section_3',4);?></p>
+              <p><strong><?php the_field('home_gemstone_section_3',4);?></strong></p>
               <?php $tag_id=14?>
 					<a href="<?php echo get_tag_link($tag_id); ?>">Read More</a>  
             </div> <!---col-xs-9--->
@@ -162,7 +162,7 @@ get_header();?>
       </div> <!--col-md-5-->
       <div class="col-md-7">
          <h3><?php the_field('home_earring_section_2',4);?></h3>
-         <p><strong><?php the_field('home_earring_section_3',4);?></p>
+         <p><strong><?php the_field('home_earring_section_3',4);?></strong></p>
         <?php $tag_id=12?>
 			<a href="<?php echo get_tag_link($tag_id); ?>">Read More</a>  
          
