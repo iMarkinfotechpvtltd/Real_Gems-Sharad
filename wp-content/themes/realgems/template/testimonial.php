@@ -27,21 +27,18 @@ function pagination()
 	success:function(resp) 
 	{
 		
-		if( resp !="")
+		if(resp == 1)
 		{
-			
-			// jQuery('#result').empty().append(resp)
-			//alert(resp);
+			jQuery("#loading_sec").hide();
+			jQuery(".btn-view-all").hide();
+		}
+		else
+		{
 			jQuery('#loading_sec').hide();
 			jQuery(resp).insertAfter(jQuery('.testimonial-page-section>div:last')).fadeIn('slow');
 			jQuery('#page_val').val(page_val1); 
-			
 		}
-		else if( resp =="")
-		{
-			jQuery(".load-more").hide();
-			
-		}
+		
 	} 
 	});
 	
@@ -73,13 +70,13 @@ function pagination()
 		if($i%2==0)
 		{
 			?>
-	<div class="white-row">
+			<div class="white-row">
 		<?php
 		}
 		else
 		{
 		?> 
-  <div class="grey-row"> 
+			<div class="grey-row"> 
 	<?php
 		}
 		?>

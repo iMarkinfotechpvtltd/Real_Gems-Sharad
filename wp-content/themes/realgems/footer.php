@@ -76,7 +76,7 @@
 
 <div class="copy-right-section">
   <div class="container">
-    <p>©<?php echo date("Y"); ?>All Rights Reserved By realgemscorp.com <span>Powered By:<a tittle="Powered By: iMark Infotech" target="_blank" href="http://www.imarkinfotech.com/">iMark <span>I</span>nfotech</a>
+    <p>©<?php echo date("Y"); ?> All Rights Reserved By realgemscorp.com <span>Powered By:<a tittle="Powered By: iMark Infotech" target="_blank" href="http://www.imarkinfotech.com/">iMark <span>I</span>nfotech</a>
 </span></p>
   </div>
 </div>
@@ -195,6 +195,7 @@ jQuery(document).ready(function()
 	 setTimeout(function() {
      jQuery(".mc4wp-response").fadeOut('slow');
 	 jQuery("input[name='EMAIL']").val('');
+	 
 }, 10000); // <-- time in milliseconds
 
 });
@@ -240,6 +241,21 @@ function validateEmail(sEmail)
 
 </script>
 <!--********************** END OF SCRIPT EMAIL LENGTH VALIDATION ***********************-->	
+
+<!--************START SCRIPT USE FOR HIDE ALERT SUCCESS AND DANGER MSG***************-->
+<script>
+
+jQuery(".alert-success").alert();
+window.setTimeout(function() { jQuery(".alert-success").alert('close'); }, 15000);
+
+jQuery(".alert-danger").alert();
+window.setTimeout(function() { jQuery(".alert-success").alert('close'); }, 15000);
+
+</script>
+<!--************END OF SCRIPT USE FOR HIDE ALERT SUCCESS AND DANGER MSG***************-->
+
+
+
 		  
 <!--**************************************** END OF JQUERY ADDED BY DEVELOPER AREA *******************************-->
 

@@ -7,8 +7,8 @@
  * @since Twenty Sixteen 1.0
  */
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+<div class="col-xs-12 col-md-3" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 	</header><!-- .entry-header -->
@@ -16,6 +16,7 @@
 	<?php twentysixteen_post_thumbnail(); ?>
 
 	<?php twentysixteen_excerpt(); ?>
+
 
 	<?php if ( 'post' === get_post_type() ) : ?>
 
@@ -49,5 +50,8 @@
 		?>
 
 	<?php endif; ?>
-</article><!-- #post-## -->
+</div><!-- #post-## -->
 
+
+
+<?php echo $counter++;?>

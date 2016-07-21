@@ -30,10 +30,19 @@ $link =get_term_link( $term_id, 'product_cat' );
     
      <!--************************ START FORM TAG FOR CREATING SEARCH BOX *********************-->
 <div class="side-search"> 
-<form role="search" method="get" id="searchform" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<!--<form role="search" method="get" id="searchform" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 
-			<input type="text" class="form-control" placeholder="Type Your Search here" name="s" id="s" value="<?php echo get_search_query(); ?>"><i class="fa fa-search" aria-hidden="true"></i>
-</form>
+	<input type="text" class="form-control" placeholder="Type Your Search here" name="s" id="s" value="<?php //echo get_search_query(); ?>"><input class="btn btn-default" type="submit" value="Search"><i class="fa fa-search" aria-hidden="true"></i>
+</form>-->
+<form role="search" method="get" id="searchform"
+			class="searchform navbar-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+          <input type="text" class="form-control" placeholder="Search" name="s" id="s" value="<?php echo get_search_query(); ?>">
+          <input class="btn search-btn btn-default" type="submit" id="searchsubmit"
+            value="<?php echo esc_attr_x( 'Search', 'submit button' ); ?>"><i class="fa fa-search" aria-hidden="true"></i>
+			<input type="submit" class="btn btn-default" id="btn_submit" value="Search"><i class="fa fa-search" aria-hidden="true"></i>
+    </form>
+
+
 </div> <!---side-search--->   
 
 <!--************************ END OF FORM TAG FOR CREATING SEARCH BOX *********************-->

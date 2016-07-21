@@ -51,6 +51,7 @@ $offSet = ( $offSet - 1 ) * $display_count;
 	<?php
 	$i++;
 endwhile;wp_reset_query();
+echo '1';
 ?>
 	
 	

@@ -40,7 +40,9 @@ jQuery(function($)
 						jQuery("#phone_number").val('');
 						jQuery("#message").val('');
 						jQuery("#btn_submit").show();
-						jQuery("#loading").hide();						
+						jQuery("#loading").hide();
+						
+                        				
 					}
 					else
 					{

@@ -48,3 +48,8 @@
 [2016-06-29 10:38:25] WARNING: Form 238 > ************infotech.com is already subscribed to the selected list(s)
 [2016-06-29 10:41:14] WARNING: Form 238 > ************infotech.com is already subscribed to the selected list(s)
 [2016-07-04 06:37:14] ERROR: Form 238 > MailChimp API error: List_RoleEmailMember: abc@gmail.com is an invalid email address and cannot be imported.
+[2016-07-08 11:03:55] ERROR: Form 238 > MailChimp API error: List_RoleEmailMember: abc@abc.com is an invalid email address and cannot be imported.
+[2016-07-08 11:04:19] WARNING: Form 238 > ************infotech.com is already subscribed to the selected list(s)
+[2016-07-08 11:04:33] WARNING: Form 238 > ************infotech.com is already subscribed to the selected list(s)
+[2016-07-12 07:33:34] ERROR: Form 238 > MailChimp API error: List_RoleEmailMember: abc@abc.com is an invalid email address and cannot be imported.
+[2016-07-12 07:52:10] ERROR: Form 238 > MailChimp API error: List_RoleEmailMember: abc@abc.com is an invalid email address and cannot be imported.

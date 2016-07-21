@@ -929,3 +929,16 @@ function put_my_url()
 add_filter('login_headerurl', 'put_my_url');
 
 /**************************End of Wordpress Logo Function***************************************************/
+
+// added by BVR for sub category search in category page
+add_action('pre_get_posts', 'search_by_cat'); 
+function search_by_cat() 
+	{     
+	global $wp_query;     
+	if (is_search()) 
+		{         
+			$cat = intval($_GET['cat']);         
+			$cat = ($cat > 0) ? $cat : '';         
+			$wp_query->query_vars['cat'] = $cat;     
+		} 
+	}

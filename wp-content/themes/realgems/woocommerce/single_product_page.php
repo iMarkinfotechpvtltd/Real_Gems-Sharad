@@ -7,6 +7,8 @@ global $post;
 .Formsubject {
     display: none;
 }
+
+
 </style>
 <script>
 jQuery(document).ready(function() {
@@ -14,19 +16,45 @@ jQuery(document).ready(function() {
 	  
 	  setTimeout(explode, 1000);
 	  
-      jQuery('.slides:first').hide();
+      //jQuery('#uniq').hide();
       
-	  
-	jQuery('.thumb_image').click(function()
-	{
-		jQuery('.video_box').hide();
-		jQuery('#slider').find('.flex-direction-nav').show(); 
-		jQuery('.slides:first').show();
+	  if (jQuery(window).width() > 1199) 
+	  {      
 		
+		jQuery('li.thumb_image').click(function()
+		{
+		
+			jQuery('.video_box').addClass('video-hide');
+			jQuery('#slider').find('.flex-direction-nav').show(); 
+			jQuery('#uniq').addClass('hide-slide');
+		
+		});	
+	  } 
+	 else 
+	  {
+		 
+		jQuery('#video-slider').click(function()
+		{
+		      jQuery('#video-slider').addClass('current');
+		     jQuery('#image-slider').removeClass('current');
+			 jQuery('.video_box').show();
+			 jQuery('#uniq').hide(); 
+			 jQuery('#p-carousel').hide(); 		 
 			
+		});	
+		jQuery('#image-slider').click(function()
+		{ 
+			 jQuery('#video-slider').removeClass('current');
+		     jQuery('#image-slider').addClass('current');
+            			 
+			 jQuery('#uniq').show(); 
+			 jQuery('#p-carousel').show(); 
+			 jQuery('.video_box').hide(); 		
 			
-	});	 
-	
+		});	 
+	  }
+	  
+	  
 	var product_name=jQuery('#post_title').val();
 	jQuery('.btn-send').click(function()
 	{
@@ -59,6 +87,7 @@ function get_color_info(id)
     });
 	
 }
+
 </script> 
 
 <!-------------------------START HERE---------------------------------->
@@ -88,7 +117,7 @@ function get_color_info(id)
 		   
 				<div id="slider" class="flexslider abc">
 						
-						<ul class="slides">
+						<ul id="uniq" class="slides">
 						<?php 
 								$gal=$result[0]->gallery;
 								$arr1=get_numerics($gal);
@@ -146,13 +175,13 @@ function get_color_info(id)
 						case "18KY":
 							//echo "color is yellow!";
 							?>
-							<span id="col" style="background-color:yellow;"></span>
+							<span id="col" style="background-color:#e7cc16;"></span>
 						<?php	
 							break;
 						case "18KR":
 							//echo "color is red!";
 						?>	
-							<span id="col" style="background-color:red;"></span>
+							<span id="col" style="background-color:#ea8134;"></span>
 						<?php		
 							break;	
 						default:
@@ -189,6 +218,8 @@ function get_color_info(id)
 					</ul>
 				</div><!--for thumb images-->
 			</div><!--slider-->
+			<button id="video-slider" class="current" type="button">Video</button> <button id="image-slider" type="button">Images</button>
+			
 		</div><!--slider result-->
 		
 	

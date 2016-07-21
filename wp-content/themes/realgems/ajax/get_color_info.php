@@ -13,15 +13,42 @@ $color = $wpdb->get_results("SELECT * FROM  im_product_info  WHERE post_id ='".$
 jQuery(document).ready(function()
 {
 	setTimeout(explode, 1000);
-	jQuery('.slides:first').hide();
-
-	jQuery('.thumb_image').click(function()
-	{
-		jQuery('.video_box').hide();
-		jQuery('#slider').find('.flex-direction-nav').show(); 
-		jQuery('.slides:first').show(); 
-	});	 
 	
+	if (jQuery(window).width() > 1199) 
+	{      
+		
+		jQuery('li.thumb_image').click(function()
+		{
+		
+			jQuery('.video_box').addClass('video-hide');
+			jQuery('#slider').find('.flex-direction-nav').show(); 
+			jQuery('#uniq').addClass('hide-slide');
+		
+		});	
+	 } 
+	 else 
+	 {
+		
+		jQuery('#video-slider').click(function()
+		{
+		     jQuery('#video-slider').addClass('current');
+		     jQuery('#image-slider').removeClass('current');
+			 jQuery('.video_box').show();
+			 jQuery('#uniq').hide(); 
+			 jQuery('#p-carousel').hide(); 		 
+			
+		});	
+		jQuery('#image-slider').click(function()
+		{ 
+			 jQuery('#video-slider').removeClass('current');
+		     jQuery('#image-slider').addClass('current');
+            			 
+			 jQuery('#uniq').show(); 
+			 jQuery('#p-carousel').show(); 
+			 jQuery('.video_box').hide(); 		
+			
+		});	 
+	  }
 }); 
 
 jQuery(document).ready(function()
@@ -46,6 +73,12 @@ jQuery('#slider').flexslider({
           jQuery('body').removeClass('loading');
         }
       });
+	  
+	var product_name=jQuery('#post_title').val();
+	jQuery('.btn-send').click(function()
+	{
+		jQuery("input[name='Formsubject']").val(product_name);
+	});	 
  
 });
 
@@ -69,8 +102,8 @@ function explode()
 	?>
 </div><!--end of video div-->
 <div class="slider">  
-	<div id="slider" class="sliderss flexslider ">
-		<ul class="slides">
+		<div id="slider" class="flexslider abc">
+		<ul id="uniq" class="slides">
 					<?php 
 					foreach($result as $row) 
 					{
@@ -106,37 +139,37 @@ function explode()
 						case "14KW":
 							//echo "color is black!";
 						?>
-							<span id="col" style="background-color:black;"></span>
+							<span id="col" style="background-color:#9d9d9d;"></span>
 						<?php 	
 							break;
 						case "14KY":
 							//echo "color is yellow!";
 						?>
-							<span id="col" style="background-color:#EBC686;"></span>
+							<span id="col" style="background-color:#e7cc16;"></span>
 						<?php 	
 							break;
 						case "14KR":
 							//echo "color is red!";
 						?>
-							<span id="col" style="background-color:red;"></span>
+							<span id="col" style="background-color:#ea8134;"></span>
 						<?php	
 							break;
 						case "18KW":
 							//echo "color is black!";
 							?>
-							<span id="col" style="background-color:black;"></span>
+							<span id="col" style="background-color:#9d9d9d;"></span>
 						<?php 	
 							break;
 						case "18KY":
 							//echo "color is yellow!";
 							?>
-							<span id="col" style="background-color:yellow;"></span>
+							<span id="col" style="background-color:#e7cc16;"></span>
 						<?php	
 							break;
 						case "18KR":
 							//echo "color is red!";
 						?>	
-							<span id="col" style="background-color:red;"></span>
+							<span id="col" style="background-color:#ea8134;"></span>
 						<?php		
 							break;	
 						default:
@@ -175,3 +208,4 @@ function explode()
 		</ul>
 	</div><!--End of thumbnail div--> 
 </div><!--End of main slider div-->  
+<button id="video-slider" class="current" type="button">Video</button> <button id="image-slider" type="button">Images</button>

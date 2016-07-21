@@ -34,7 +34,9 @@ $link =get_term_link( $term_id, 'product_cat' );
 	<!--************************ START FORM TAG FOR CREATING SEARCH BOX *********************-->
  <div class="side-search"> 
 <form role="search" method="get" id="searchform" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<input type="text" class="form-control" placeholder="Type Your Search here" name="s" id="s" value="<?php echo get_search_query(); ?>"><input class="btn btn-default" type="submit" value="Search"><i class="fa fa-search" aria-hidden="true"></i>
+			<input type="text" class="form-control" placeholder="Type Your Search here" name="s" id="s" value="<?php echo get_search_query(); ?>">
+			<input type="hidden" name="post_type" value="product">
+			<input class="btn btn-default" type="submit" value="Search"><i class="fa fa-search" aria-hidden="true"></i>
   </form>
  </div> <!---side-search---> 
 
